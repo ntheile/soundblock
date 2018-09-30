@@ -11,7 +11,7 @@ export class DID3Tag{
     public artistDigitalSignature: string; // base64 
     public artistPublicKey: string; // base64
     public rawMusicFileHash: string; // sha256 hash
-    public license: string; // free, free for X plays, pay per month, pay to own
+    public license: string; // free,  pay to own   - free for X plays, pay per month,
 
     constructor() {
         this.guid = (<any>window).guid();

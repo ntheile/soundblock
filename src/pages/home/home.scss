@@ -1,3 +1,125 @@
 page-home {
 
 }
+
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,300");
+body,
+html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family: Roboto, sans-serif;
+}
+
+* {
+    box-sizng: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#player {
+    width: 300px;
+    height: 450px;
+    box-shadow: 0 0 5px #bbb;
+}
+
+#player .cover {
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+#player .cover .lrc {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#player .cover .line {
+    cursor: default;
+    display: flex;
+    margin-bottom: 8px;
+    width: 90%;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 3px;
+    padding: 8px 10px;
+    font-size: 13px;
+    line-height: 16px;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#player .progressContainer {
+    cursor: pointer;
+    position: relative;
+}
+
+#player .buffer {
+    height: 7px;
+    width: 0%;
+    background-color: grey;
+}
+
+#player .progress {
+    height: 7px;
+    position: absolute;
+    top: 0;
+    width: 0%;
+    background-color: red;
+}
+
+#player .detail {
+    padding: 12px 20px;
+}
+
+#player .detail .title {
+    text-align: center;
+    font-size: 15px;
+}
+
+#player .controls {
+    display: flex;
+    width: 100%;
+    margin-top: 3px;
+    justify-content: center;
+    align-items: center;
+}
+
+#player .controls .icon {
+    font-size: 36px;
+    cursor: pointer;
+}
+
+#player .controls .icon:hover {
+    color: #f33336;
+}
+
+#player .controls .icon.play,
+#player .controls .icon.pause {
+    color: #f44336;
+    font-size: 55px;
+    margin-left: 5px;
+    margin-right: 5px
+}
+
+#player .controls .icon.pause,
+#player .controls .icon.repeat-one,
+#player .controls .icon.shuffle {
+    display: none;
+}
+
+#player input.volume {
+    display: none;
+    width: 50px;
+}

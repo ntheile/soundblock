@@ -1,11 +1,50 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Decentralized Player</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h4>
-    {{ chainInfo | json }}
-  </h4>
+
+  <div class="flex-container">
+    <div class="row">
+      <div class="flex-item">
+
+        <div id="player">
+          <div class="cover">
+            <div class="lrc">
+              <div class="line"></div>
+            </div>
+          </div>
+          <div class="progressContainer">
+            <div class="buffer"></div>
+            <div class="progress"></div>
+          </div>
+          <div class="detail">
+            <div class="title"></div>
+          </div>
+          <div class="controls">
+            <i class="icon repeat material-icons">repeat</i>
+            <i class="icon repeat-one material-icons">repeat_one</i>
+            <i class="icon shuffle material-icons">shuffle</i>
+            <i class="icon prev material-icons">skip_previous</i>
+            <i class="icon play material-icons">play_circle_filled</i>
+            <i class="icon pause material-icons">pause_circle_filled</i>
+            <i class="icon next material-icons">skip_next</i>
+            <i class="icon volume material-icons">volume_up</i>
+            <input type="range" class="volume" min="0" max="100" step="1" value="100" />
+
+          </div>
+        </div>
+
+      </div>
+      <div class="flex-item">
+        <!-- more content -->
+      </div>
+    </div>
+  </div>
+
+
+
+
 </ion-content>
