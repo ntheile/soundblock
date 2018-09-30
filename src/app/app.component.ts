@@ -22,31 +22,8 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
-      this.showProfile();
+      window.blockstack = blockstack;
     });
-  }
-
-  login() {
-    let origin = window.location.origin;
-    let manifest = origin;
-    blockstack.redirectToSignIn(origin, manifest + '/manifest.json', ['store_write', 'publish_data', 'email'])
-  }
-
-  async showProfile() {
-    if (blockstack.isUserSignedIn()) {
-      let profile = blockstack.loadUserData();
-      this.name = profile.username;
-      this.isLoggedIn = true;
-      try {
-        this.avatar = profile.profile.image[0].contentUrl;
-      } catch (e) { console.log('no profile pic') }
-    } else if (blockstack.isSignInPending()) {
-      blockstack.handlePendingSignIn().then(function (userData) {
-        window.location = window.location.origin
-        this.documentsGetList();
-        this.loading.dismiss();
-      });
-    }
   }
 
 }

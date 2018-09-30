@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { FactomProvider } from '../../providers/factom/factom';
+import { HeaderComponent } from '../../components/header/header';
 declare let $: any;
 declare let window: any;
 
@@ -308,6 +309,13 @@ export class HomePage {
   }
   
   var songs = [
+    {
+        track: "https://drive.google.com/open?id=19a0NIoLJqVOudPECNoIUihpiWiZJTvfO",
+        cover: "https://bytebucket.org/kyicy/staticfile/raw/e999a5f0477542c51591e64e03942a1d45fe77eb/codepen/eMpyRR/Adam%20Lambert-Sleepwalker.jpg",
+        artist: "Nick Theile",
+        title: "Super Mario",
+        lrc: "https://bitbucket.org/kyicy/staticfile/raw/e999a5f0477542c51591e64e03942a1d45fe77eb/codepen/eMpyRR/Adam%20Lambert-Sleepwalker.lrc"
+    },
     {
       track: "https://bitbucket.org/kyicy/staticfile/raw/e999a5f0477542c51591e64e03942a1d45fe77eb/codepen/eMpyRR/Adam%20Lambert-Sleepwalker.mp3",
       cover: "https://bytebucket.org/kyicy/staticfile/raw/e999a5f0477542c51591e64e03942a1d45fe77eb/codepen/eMpyRR/Adam%20Lambert-Sleepwalker.jpg",

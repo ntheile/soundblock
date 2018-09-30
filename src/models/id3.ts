@@ -7,8 +7,8 @@ export class DID3Tag{
     public artUrl: string;
     public genre: string;
     public year: string;
-    public guid: any;
-    public createdAt: Date; 
+    public guid?: any;
+    public createdAt?: Date; 
     public artistDigitalSignature: string; // base64 
     public artistPublicKey: string; // base64
     public rawMusicFileHash: string; // sha256 hash

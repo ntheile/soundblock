@@ -11,14 +11,17 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { FactomProvider } from '../providers/factom/factom';
-
+import { BlockstackProvider } from '../providers/blockstack/blockstack';
+import { HeaderComponent } from '../components/header/header'
+ 
 @NgModule({
   declarations: [
     MyApp,
+    HeaderComponent,
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,8 @@ import { FactomProvider } from '../providers/factom/factom';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    FactomProvider
+    FactomProvider,
+    BlockstackProvider
   ]
 })
 export class AppModule {}

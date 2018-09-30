@@ -4,6 +4,9 @@ declare let window: any;
 import 'rxjs/add/operator/toPromise';
 import * as sodium from 'sodium-signatures';
 import { Buffer } from 'buffer';
+import { box, hash, sign, BoxKeyPair, SignKeyPair } from 'tweetnacl'
+import * as blockstack from 'blockstack';
+
 
 
 @Injectable()
@@ -12,10 +15,6 @@ export class FactomProvider {
   cli;
 
   constructor() {
-
-
-   
-
     this.cli = new FactomCli({
       host: 'localhost',
       port: 8088,
@@ -33,6 +32,7 @@ export class FactomProvider {
     window.factom = this.cli;
     window.Entry = Entry;
     window.Chain = Chain;
+    this.createKeyPair();
   }
 
   async getTransactionInfo(txId) {
@@ -71,6 +71,9 @@ export class FactomProvider {
      var signature = sodium.sign(message, keys.secretKey);
      var verified = sodium.verify(message, signature, keys.publicKey);
      console.log('message was verified', verified);
+
+    // window.sign = sign;
+    // box.keyPair.fromSecretKey(blockstack.loadUserData().appPrivateKey);
   }
 
 }

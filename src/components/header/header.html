@@ -1,0 +1,18 @@
+<!-- Generated template for the HeaderComponent component -->
+
+<ion-navbar color="main">
+  <ion-item color="main" no-lines>
+    <ion-searchbar item-start [(ngModel)]="myInput" 
+       [showCancelButton]="shouldShowCancel" 
+       (ionInput)="onSearch($event)"
+      (ionCancel)="onCancel($event)"
+      style="max-width: 400px;">
+    </ion-searchbar>
+    <h1 item-end>{{ blockstackService.name }}</h1>
+    <ion-avatar item-end>
+      <a href="https://browser.blockstack.org/profiles" target="_blank">
+        <img src="{{blockstackService.avatar}}">
+      </a>
+    </ion-avatar>
+  </ion-item>
+</ion-navbar>
