@@ -18,6 +18,7 @@ export class HomePage {
         artist: 'Nick Theile',
         artistDigitalSignature: '',
         artistPublicKey: '',
+        musicPointer: 'https://raw.githubusercontent.com/ntheile/soundblock/master/src/assets/music/Super%20Mario.mp3',
         artUrl: 'https://supermariorun.com/assets/img/hero/hero_chara_mario_update_pc.png',
         genre: 'alternative',
         license: 'free',

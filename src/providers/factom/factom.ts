@@ -14,7 +14,7 @@ export class FactomProvider {
 
   cli;
   chainId = "c9cd45cc1c3099f96cbaa1dc5b96934f880ed5f2038f3bbddab6d98822c5099e"; // Nick Theile Artist
-  entryId = "94a1e3d14926e8809457e3e13bfc36e16f4c395b9599bc5f00963fdc3221c029"; // Super Mario Song
+  entryId = "e72cfa6e727ed76f960a14940e0235ebfb63685b531c858cd26f0888b53bd594"; // Super Mario Song
 
   constructor(
     private toastCtrl: ToastController,
@@ -93,7 +93,8 @@ export class FactomProvider {
     let toast = this.toastCtrl.create({
       message: data,
       position: 'top',
-      showCloseButton: true
+      //showCloseButton: true,
+      duration: 5000
     });
 
     toast.onDidDismiss(() => {
@@ -107,7 +108,7 @@ export class FactomProvider {
     let toast = this.toastCtrl.create({
       message: data,
       position: 'middle',
-      duration: 4000
+      duration: 3000
     });
 
     toast.onDidDismiss(() => {
