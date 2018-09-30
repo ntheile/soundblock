@@ -6,15 +6,19 @@ import * as sodium from 'sodium-signatures';
 import { Buffer } from 'buffer';
 import { box, hash, sign, BoxKeyPair, SignKeyPair } from 'tweetnacl'
 import * as blockstack from 'blockstack';
-
+import { ToastController } from 'ionic-angular';
 
 
 @Injectable()
 export class FactomProvider {
 
   cli;
+  chainId = "c9cd45cc1c3099f96cbaa1dc5b96934f880ed5f2038f3bbddab6d98822c5099e"; // Nick Theile Artist
+  entryId = "94a1e3d14926e8809457e3e13bfc36e16f4c395b9599bc5f00963fdc3221c029"; // Super Mario Song
 
-  constructor() {
+  constructor(
+    private toastCtrl: ToastController,
+  ) {
     this.cli = new FactomCli({
       host: 'localhost',
       port: 8088,
@@ -41,25 +45,34 @@ export class FactomProvider {
     return resp;
   }
 
-  async createChain(chainName) {
+  async createChain(chainName, artistMetaData) {
     const firstEntry = Entry.builder()
       .extId('6d79206578742069642031') // If no encoding parameter is passed as 2nd argument, 'hex' is used
-      .extId('my ext id 1', 'utf8') // Explicit the encoding. Or you can pass directly a Buffer
-      .content('Initial content', 'utf8')
+      .extId(chainName, 'utf8') // Explicit the encoding. Or you can pass directly a Buffer
+      .content('My Artist MetaData', 'utf8')
       .build();
 
     const chain = new Chain(firstEntry);
     this.cli.add(chain, window.appsettings.entryPrivKey);
+
+    this.presentToastDismiss('Created chain on Factom - ' + chainName);
   }
 
-  async sendTransaction() {
+  async sendTransaction(musicData) {
     const myEntry = Entry.builder()
-      .chainId('c9cd45cc1c3099f96cbaa1dc5b96934f880ed5f2038f3bbddab6d98822c5099e')
+      .chainId(this.chainId)
       .extId('6d79206578742069642031') // If no encoding parameter is passed as 2nd argument, 'hex' is used
-      .extId('some external ID', 'utf8')
-      .content('My new content', 'utf8')
+      .extId('Digital Signature', 'utf8')
+      .content(musicData, 'utf8')
       .build();
     this.cli.add(myEntry, window.appsettings.entryPrivKey);
+    this.presentToast('Created entry on Factom - ' + musicData);
+  }
+
+  async getEntry(entryId){
+    let resp = await this.cli.getEntry(this.entryId);
+    this.presentToast(resp.content.toString());
+    return resp;
   }
 
   // https://github.com/mafintosh/sodium-signatures
@@ -74,6 +87,34 @@ export class FactomProvider {
 
     // window.sign = sign;
     // box.keyPair.fromSecretKey(blockstack.loadUserData().appPrivateKey);
+  }
+
+  presentToast(data) {
+    let toast = this.toastCtrl.create({
+      message: data,
+      position: 'top',
+      showCloseButton: true
+    });
+
+    toast.onDidDismiss(() => {
+      console.log('Dismissed toast');
+    });
+
+    toast.present();
+  }
+
+  presentToastDismiss(data) {
+    let toast = this.toastCtrl.create({
+      message: data,
+      position: 'middle',
+      duration: 4000
+    });
+
+    toast.onDidDismiss(() => {
+      console.log('Dismissed toast');
+    });
+
+    toast.present();
   }
 
 }

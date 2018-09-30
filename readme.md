@@ -1,15 +1,17 @@
 # Soundblock
-Open source music player and music discovery tool for Indepentent artists and fans powered by the Blockchain. It supports peer (fan) to peer (artist) payments for liscensed material with no fees, the artist gets 100% of the profits. 
+Open source music player and music discovery tool for Indepentent artists and fans powered by the Blockchain. 
+
+It supports peer (fan) to peer (artist) payments for liscensed material with no fees, no record labels, no middlemen. The artist gets 100% of the profits. 
 
 ## Problem Case
-Artists are making less and less money for their art the more and more it becomes digitized. There are independent music artists, such as Chance the Rapper, although he does not share any royalties with a record label he has to share his musical profits with 3rd party intermediaries like iTunes and Sportify and conform to their pricing schemas. Despite advances in technology, still no artist ownns 100% of his music.  
+Artists are making less and less money for their art the more and more it becomes digitized. Independent music artists do still exists, such as Chance the Rapper, although he does not share any royalties with a record label he has to share his musical profits with 3rd party intermediaries like iTunes and Sportify and confirm to their pricing schemas. Despite advances in technology, still no artist owns 100% of his music due to licenses having to be handled by trusted third parties. Why I can't just goto spotify and upload my music? Why can't I get paid when I upload songs to Soundblock? 
 
 Soundblock proposes self soverign music ownership for independent artists. 
 
 ## Artists
 -  Upload and maintain ownership of your music without any record label (or any third parties)
 -  Choose your own monetization scheme for the song/album: free, 5 free plays, pay per play, pay per month, pay to own 
-                   - No fees are taken (not even from Soundblock) , you own 100% of profit
+   -  No fees are taken (not even from Soundblock) , you own 100% of profit
 - Gamify your music to engage and build your fan base (network effect)
 
 ## Fans

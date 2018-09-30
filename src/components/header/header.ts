@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { BlockstackProvider } from '../../providers/blockstack/blockstack';
+import { FactomProvider } from '../../providers/factom/factom';
+import { ToastController } from 'ionic-angular';
 
 /**
  * Generated class for the HeaderComponent component.
@@ -15,25 +17,30 @@ export class HeaderComponent {
 
   text: string;
   name;
+  searchResults;
 
   constructor(
-    private blockstackService: BlockstackProvider
+    private blockstackService: BlockstackProvider,
+    private factom: FactomProvider,
+    private toastCtrl: ToastController,
   ) {
     console.log('Hello HeaderComponent Component');
     this.text = 'Hello World';
     this.getProfile();
   }
 
-  async getProfile(){
-    this.blockstackService.getProfile(); 
+  async getProfile() {
+    this.blockstackService.getProfile();
   }
 
-  onSearch(){
-
+  async onSearch() {
+    this.searchResults = await this.factom.getEntry('a9db1b6c1c193aff15c5bcbef488e142ffddc75f5a6fb4a674ec7ab6de4889eb');
   }
 
-  onCancel(){
-    
+  
+
+  onCancel() {
+
   }
 
 }

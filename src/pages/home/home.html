@@ -1,9 +1,8 @@
 <ion-header>
-   
-        <header></header>
+
+  <header></header>
 </ion-header>
 <ion-content padding>
-
 
   <div class="flex-container">
     <div class="row">
@@ -36,12 +35,36 @@
           </div>
         </div>
 
+
+
       </div>
-      <div class="flex-item">
-        <!-- more content -->
+      <div class="flex-item" >
+
+
       </div>
+
+
     </div>
+    <ion-item no-lines style="overflow: auto; width: 600px; margin-top: 40px">
+      <button ion-button round style="height: 40px;" (click)="createChain()">Create Chain - Nick Theile</button>
+      <button ion-button round style="height: 40px;" (click)="createEntry()">Create Entry - Song: Super Mario</button>
+    </ion-item>
+<pre style="overflow: auto; width: 600px">
+song: 'Super Mario',
+album: 'self title',
+artist: 'Nick Theile',
+artistPublicKey: '17xxYBCvxwrwKtAna4bubsxGCMCcVNAgyw',
+artUrl: 'https://supermariorun.com/assets/img/hero/hero_chara_mario_update_pc.png',
+genre: 'alternative',
+license: 'free',
+lyricsUrl: 'http://url-to-lyrics.lrc',
+rawMusicMp3FileHash: 'VavdtobEd42NUVAJfUrELRRRzY3n5MpMa8yxWQtAevs=',
+year: '2018'
+</pre>
+
+
   </div>
+
 
 
 
