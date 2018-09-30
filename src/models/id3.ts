@@ -4,6 +4,7 @@ export class DID3Tag{
     public song: string;
     public artist: string;
     public album: string;
+    public artUrl: string;
     public genre: string;
     public year: string;
     public guid: any;
@@ -12,9 +13,12 @@ export class DID3Tag{
     public artistPublicKey: string; // base64
     public rawMusicFileHash: string; // sha256 hash
     public license: string; // free,  pay to own   - free for X plays, pay per month,
+    public lyricsUrl: string; 
 
     constructor() {
         this.guid = (<any>window).guid();
         this.createdAt = (<any>Date).now();
     }
 }
+
+// factom schema

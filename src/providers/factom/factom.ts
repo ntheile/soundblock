@@ -13,12 +13,8 @@ export class FactomProvider {
 
   constructor() {
 
-    window.sodium = sodium;
-    var keys = sodium.keyPair();
-    var message = new Buffer('a message');
-    var signature = sodium.sign(message, keys.secretKey);
-    var verified = sodium.verify(message, signature, keys.publicKey);
-    console.log('message was verified', verified);
+
+   
 
     this.cli = new FactomCli({
       host: 'localhost',
@@ -64,6 +60,17 @@ export class FactomProvider {
       .content('My new content', 'utf8')
       .build();
     this.cli.add(myEntry, window.appsettings.entryPrivKey);
+  }
+
+  // https://github.com/mafintosh/sodium-signatures
+  async createKeyPair(){
+     
+     window.sodium = sodium;
+     var keys = sodium.keyPair();
+     var message = new Buffer('a message');
+     var signature = sodium.sign(message, keys.secretKey);
+     var verified = sodium.verify(message, signature, keys.publicKey);
+     console.log('message was verified', verified);
   }
 
 }

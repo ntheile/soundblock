@@ -1,5 +1,10 @@
 # Soundblock
-Independent open music player and community for artists and fans powered by the Blockchain.  
+Open source music player and music discovery tool for Indepentent artists and fans powered by the Blockchain. It supports peer (fan) to peer (artist) payments for liscensed material with no fees, the artist gets 100% of the profits. 
+
+## Problem Case
+Artists are making less and less money for their art the more and more it becomes digitized. There are independent music artists, such as Chance the Rapper, although he does not share any royalties with a record label he has to share his musical profits with 3rd party intermediaries like iTunes and Sportify and conform to their pricing schemas. Despite advances in technology, still no artist ownns 100% of his music.  
+
+Soundblock proposes self soverign music ownership for independent artists. 
 
 ## Artists
 -  Upload and maintain ownership of your music without any record label (or any third parties)
@@ -34,8 +39,8 @@ Soundblock is created for everyone by an open community of passionate musicians 
 
 ## Technology
 - Decentralized and open source application (Dapp). 
-- Inspires to be an open decentralized protocol
-- Blockstack used for Identity and  storage.
+- Open decentralized protocol, MIT license
+- Blockstack used for Identity and  storage. Factom used to aggreate hashes. 
   - An indexer on top of the Blockstack block explorer is used to aggregate public data and artists profiles
   - Free songs are not encrypted and are stored to the Artists storage bucket
     - An indexer could grab this and put it on a CDN (or just make sure the Artists storage bucket is a highly available CDN)
@@ -46,11 +51,12 @@ Soundblock is created for everyone by an open community of passionate musicians 
 - Payments can be handled using fiat or crypto. Maybe an advanced token model can be created? (but not in V1 MVP)
 
 ## How Does Soundblock make money?
+- Artists Premium Features
+  - Back in da during the peak of the peer to peer and torrenting,  the clients, such as Kazzaa or uTorrent made alot of money on promoted front page content
+    - An artist can Pay to be a daily promoted artist (in turn funding further development of the protocol).
+    - An artist can pay a very small one time fee to fund the hash being written to the blockchain, let's say a 99 cent fee. 
+    - Fans can pay for digital collectibles and game rewards in the client player software. Maybe buy a badge or digitial pin for being the worlds biggest Chance the Rapper fan.
 - Donations
-- Artists Premium Updates
-  - Pay to be a daily promoted artist
-  - Pay for digital rights managements (i.e hash to blockchain) 
-  - Fans can pay for digital collectibles and game rewards
 - Blockstack App rewards mining 
 
 ## MVP
