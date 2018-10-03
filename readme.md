@@ -1,7 +1,9 @@
 # Soundblock
 Open source music player and music discovery tool for Indepentent artists and fans powered by the Blockchain. 
 
-It supports peer (fan) to peer (artist) payments for liscensed material with no fees, no record labels, no middlemen. The artist gets 100% of the profits. 
+It supports peer (fan) to peer (artist) payments for liscensed material with no fees, no record labels, no middlemen. The artist gets 100% of the profits.
+
+![alt text](https://github.com/ntheile/soundblock/blob/master/src/assets/soundblock.png?raw=true "Soundblock")
 
 ## Problem Case
 Artists are making less and less money for their art the more and more it becomes digitized. Independent music artists do still exists, such as Chance the Rapper, although he does not share any royalties with a record label he has to share his musical profits with 3rd party intermediaries like iTunes and Sportify and confirm to their pricing schemas. Despite advances in technology, still no artist owns 100% of his music due to licenses having to be handled by trusted third parties. Why I can't just goto spotify and upload my music? Why can't I get paid when I upload songs to Soundblock? 
