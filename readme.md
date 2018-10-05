@@ -6,7 +6,10 @@ It supports peer (fan) to peer (artist) payments for liscensed material with no 
 ![alt text](https://github.com/ntheile/soundblock/blob/master/src/assets/soundblock.png?raw=true "Soundblock")
 
 ## Problem Case
-Artists are making less and less money for their art the more and more it becomes digitized. Independent music artists do still exists, such as Chance the Rapper, although he does not share any royalties with a record label he has to share his musical profits with 3rd party intermediaries like iTunes and Sportify and confirm to their pricing schemas. Despite advances in technology, still no artist owns 100% of his music due to licenses having to be handled by trusted third parties. Why I can't just goto spotify and upload my music? Why can't I get paid when I upload songs to Soundblock? 
+Artists are making less and less money for their art, the more and more it becomes digitized. Independent music artists do still exists, such as Chance the Rapper. Although he does not share any royalties with a record label, he has to share his musical profits with 3rd party intermediaries like iTunes and Sportify and conform to their pricing schemas. Despite advances in technology, still no artist owns 100% of his music due to licenses having to be handled by trusted third parties. 
+
+- Why I can't just goto spotify and upload my music? 
+- Why can't I get paid when I upload songs to Soundcloud? 
 
 Soundblock proposes self soverign music ownership for independent artists. 
 
@@ -18,7 +21,7 @@ Soundblock proposes self soverign music ownership for independent artists.
 
 ## Fans
 - Listen to your favorite artists using the Soundblock player.
-- Listen to songs for free or pay the artists directly for great songs (no fees are paid to middlemen, the artists get 100%) .
+- Listen to songs for free or pay the artists directly for great songs (no fees are paid to middlemen, the artists get 100%). This really resonates with how we pay artist at shows for cd's and t-shirts at merch tables.
 
 
 ## Mission
@@ -32,6 +35,9 @@ Soundblock is created for everyone by an open community of passionate musicians 
 ## Global Independent Music Index
 - Although the raw music file is owned and stored by the artists a global index of public data generate and includes
   - Hash of the raw music file
+  - Artists digital signature
+  - Pointer to the actual file locatiion
+  - License
   - Metadata about the song (ID3)
     - Song name
     - Artist name
@@ -39,7 +45,11 @@ Soundblock is created for everyone by an open community of passionate musicians 
     - Composer
     - Genre [Array]
     - Year
-  - License
+  
+  
+  `This is as the DID3 tag, a proposed open protocol. Decentralized ID3 metadata tags for mp3's.`
+  
+It extends the ID3 spec and adds: an mp3 hash, license, a pointer to the actual file location, and the artists digital signature (of the former). 
 
 ## Technology
 - Decentralized and open source application (Dapp). 
