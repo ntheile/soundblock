@@ -54,7 +54,7 @@ It extends the ID3 spec and adds: an mp3 hash, license, a pointer to the actual 
 ## Technology
 - Decentralized and open source application (Dapp). 
 - Open decentralized protocol, MIT license
-- Blockstack used for Identity and  storage. Factom used to aggreate hashes. 
+- Blockstack used for Identity and  storage. Blockstack subdomain used to aggreate hashes. 
   - An indexer on top of the Blockstack block explorer is used to aggregate public data and artists profiles
   - Free songs are not encrypted and are stored to the Artists storage bucket
     - An indexer could grab this and put it on a CDN (or just make sure the Artists storage bucket is a highly available CDN)
@@ -64,9 +64,17 @@ It extends the ID3 spec and adds: an mp3 hash, license, a pointer to the actual 
   - A hash is stored to the blockchain
 - Payments can be handled using fiat or crypto. Maybe an advanced token model can be created? (but not in V1 MVP)
 
+## Peer to Peer, IPFS and WebRTC
+
+Public songs can be pinned to the artists gaia storge bucket to make sure its always available. As more users listen to the song it can be replicated across the peer to peer network using IPFS. (Think about how this can be done for encrypted songs). 
+
+Checkout
+- https://github.com/ipfs-shipyard/peer-star-app
+- Open index protocol - https://www.youtube.com/watch?v=MDf0RzSduSc&t=1079s
+
 ## How Does Soundblock make money?
 - Artists Premium Features
-  - Back in da during the peak of the peer to peer and torrenting,  the clients, such as Kazzaa or uTorrent made alot of money on promoted front page content
+  - Back in the day, during the peak of the peer to peer and torrenting,  the clients, such as Kazzaa or uTorrent made alot of money on promoted front page content
     - An artist can Pay to be a daily promoted artist (in turn funding further development of the protocol).
     - An artist can pay a very small one time fee to fund the hash being written to the blockchain, let's say a 99 cent fee. 
     - Fans can pay for digital collectibles and game rewards in the client player software. Maybe buy a badge or digitial pin for being the worlds biggest Chance the Rapper fan.
@@ -76,4 +84,4 @@ It extends the ID3 spec and adds: an mp3 hash, license, a pointer to the actual 
 ## MVP
 - Music Player Client - handles decrypting liscensed music
 - Self Sovereign Artist Ownership of raw music file - profile and upload song using Blockstack
-- global independent music index - Store raw song hash and metadata to blockchain using Factom 
+- global independent music index - Store raw song hash and metadata to blockchain using subdomains 
